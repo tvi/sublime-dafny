@@ -1,0 +1,103 @@
+{
+  "name": "Dafny",
+  "scopeName": "source.dafny",
+  "fileTypes": [
+    "dfy"
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.dafny"
+            }
+          },
+          "name": "comment.block.empty.dafny",
+          "match": "/\\*\\*/"
+        },
+        {
+          "include": "#comments-inline"
+        }
+      ]
+    },
+    "comments-inline": {
+      "patterns": [
+        {
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.dafny"
+            }
+          },
+          "begin": "/\\*",
+          "end": "\\*/",
+          "name": "comment.block.dafny"
+        },
+        {
+          "captures": {
+            "1": {
+              "name": "comment.line.double-slash.dafny"
+            },
+            "2": {
+              "name": "punctuation.definition.comment.dafny"
+            }
+          },
+          "match": "\\s*((//).*$\\n?)"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.dafny",
+          "match": "\\b(class|datatype|codatatype|type|function|ghost|var|method|constructor|comethod|abstract|module|import|default|as|opened|static|refines|returns|break|then|else|if|label|return|while|print|where|new|parallel|in|this|fresh|choose|match|case|assert|assume|predicate|copredicate|forall|exists|false|true|null|old|calc|iterator|yields|yield)\\b"
+        },
+        {
+          "name": "punctuation.terminator.dafny",
+          "match": ";"
+        },
+        {
+          "name": "keyword.control.verify.dafny",
+          "match": "\\b(requires|ensures|modifies|reads|free|invariant|decreases)\\b"
+        },
+        {
+          "name": "keyword.type.dafny",
+          "match": "\\b(bool|multiset|map|nat|int|object|set|seq|array)\\b"
+        },
+        {
+          "name": "keyword.control.catch-exception.java",
+          "match": "\\b(try|catch|finally|throw)\\b"
+        },
+        {
+          "name": "keyword.control.java",
+          "match": "\\?|:"
+        },
+        {
+          "name": "keyword.operator.comparison.java",
+          "match": "(==|!=|<=|>=|<>|<|>)"
+        },
+        {
+          "name": "keyword.operator.assignment.java",
+          "match": "(:=)"
+        },
+        {
+          "name": "keyword.operator.increment-decrement.java",
+          "match": "(\\-\\-|\\+\\+)"
+        },
+        {
+          "name": "keyword.operator.arithmetic.java",
+          "match": "(\\-|\\+|\\*|\\/|%)"
+        },
+        {
+          "name": "keyword.operator.logical.java",
+          "match": "(!|&&|\\|\\|)"
+        },
+        {
+          "name": "keyword.operator.dereference.java",
+          "match": "(?<=\\S)\\.(?=\\S)"
+        }
+      ]
+    }
+  },
+  "uuid": "f4eb6552-5503-47cf-9d18-6388d5449516"
+}
