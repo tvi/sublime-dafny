@@ -8,7 +8,7 @@ A Sublime Text 2 plugin for Dafny. Provides verifing and syntax highlighting.
 The Problem
 ===========
 
-<problem this package tries to solve>
+This packages adds support for Dafny static program verifier to Sublime Text 2.
 
 
 Getting Started

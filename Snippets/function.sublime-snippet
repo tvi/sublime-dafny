@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[function ]]></content>
+    <tabTrigger>fu</tabTrigger>
+    <scope>source.dafny</scope>
+    <description>function</description>
+</snippet>

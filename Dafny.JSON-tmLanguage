@@ -5,6 +5,19 @@
     "dfy"
   ],
   "repository": {
+    "code": {
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#comments-inline"
+        },
+        {
+          "include": "#keywords"
+        }
+      ]
+    },
     "comments": {
       "patterns": [
         {
@@ -53,6 +66,10 @@
           "match": "\\b(class|datatype|codatatype|type|function|ghost|var|method|constructor|comethod|abstract|module|import|default|as|opened|static|refines|returns|break|then|else|if|label|return|while|print|where|new|parallel|in|this|fresh|choose|match|case|assert|assume|predicate|copredicate|forall|exists|false|true|null|old|calc|iterator|yields|yield)\\b"
         },
         {
+          "name": "entity.name.function",
+          "match": "\\b(function)\\b"
+        },
+        {
           "name": "punctuation.terminator.dafny",
           "match": ";"
         },
@@ -99,5 +116,16 @@
       ]
     }
   },
-  "uuid": "f4eb6552-5503-47cf-9d18-6388d5449516"
+  "patterns": [
+    {
+      "name": "keyword.control.dafny",
+      "match": "\\b(class|datatype|codatatype|type|function|ghost|var|method|constructor|comethod|abstract|module|import|default|as|opened|static|refines|returns|break|then|else|if|label|return|while|print|where|new|parallel|in|this|fresh|choose|match|case|assert|assume|predicate|copredicate|forall|exists|false|true|null|old|calc|iterator|yields|yield)\\b"
+    },
+    {
+          "include": "#code"
+    }
+  ],
+  "foldingStartMarker": "(\\{\\s*(//.*)?$|^\\s*// \\{\\{\\{)",
+  "foldingStopMarker": "^\\s*(\\}|// \\}\\}\\}$)",
+  "uuid": "f4eb6552-5503-47cf-9d18-6388d0981235"
 }
