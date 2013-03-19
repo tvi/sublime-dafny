@@ -1,8 +1,8 @@
 ================
-%(package_name)s
+sublime-dafny
 ================
 
-<main description>
+A Sublime Text 2 plugin for Dafny. Provides verifing and syntax highlighting.
 
 
 The Problem
