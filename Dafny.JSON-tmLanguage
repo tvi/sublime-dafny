@@ -114,6 +114,14 @@
           "match": "(?<=\\S)\\.(?=\\S)"
         }
       ]
+    },
+    "parameters": {
+      "patterns": [
+        {
+          "name": "storage.type.dafny",
+          "match": "<.+?>"
+        }
+      ]
     }
   },
   "patterns": [
@@ -122,7 +130,26 @@
       "match": "\\b(class|datatype|codatatype|type|function|ghost|var|method|constructor|comethod|abstract|module|import|default|as|opened|static|refines|returns|break|then|else|if|label|return|while|print|where|new|parallel|in|this|fresh|choose|match|case|assert|assume|predicate|copredicate|forall|exists|false|true|null|old|calc|iterator|yields|yield)\\b"
     },
     {
-          "include": "#code"
+      "name": "storage.type.dafny",
+      "match": "<.+?>"
+    },
+    {
+      "begin": "(\\w+)\\s*\\(",
+      "end": "\\)",
+      "name": "meta.method.identifier.dafny",
+      "patterns": [
+        {
+          "include": "#parameters"
+        }
+      ],
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.dafny"
+        }
+      }
+    },
+    {
+      "include": "#code"
     }
   ],
   "foldingStartMarker": "(\\{\\s*(//.*)?$|^\\s*// \\{\\{\\{)",

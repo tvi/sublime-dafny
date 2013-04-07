@@ -21,6 +21,35 @@
 			<string>keyword.control.dafny</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>&lt;.+?&gt;</string>
+			<key>name</key>
+			<string>storage.type.dafny</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(\w+)\s*\(</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.dafny</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>meta.method.identifier.dafny</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#parameters</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>include</key>
 			<string>#code</string>
 		</dict>
@@ -189,6 +218,18 @@
 					<string>(?&lt;=\S)\.(?=\S)</string>
 					<key>name</key>
 					<string>keyword.operator.dereference.java</string>
+				</dict>
+			</array>
+		</dict>
+		<key>parameters</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>&lt;.+?&gt;</string>
+					<key>name</key>
+					<string>storage.type.dafny</string>
 				</dict>
 			</array>
 		</dict>
