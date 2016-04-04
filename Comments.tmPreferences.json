@@ -1,0 +1,8 @@
+{
+  "name": "Comments",
+  "scope": "source.dafny",
+  "settings": {
+    "shellVariables": [{"name": "TM_COMMENT_START", "value": "// "}]
+  },
+  "uuid": "f4eb6552-5503-47cf-9d18-6388d0981200"
+}
